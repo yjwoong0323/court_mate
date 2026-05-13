@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: court-mate
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/court_mate?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 9874
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate  # 테이블 직접 만들었으니 validate
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true  # SQL 보기 좋게 출력
+    show-sql: true
+
+  sql:
+    init:
+      mode: never
+
+server:
+  port: 8080
