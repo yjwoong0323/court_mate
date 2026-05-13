@@ -21,8 +21,10 @@ public class PlayerService {
    * 선수 추가
    */
   @Transactional
-  public Player addPlayer(PlayerCreateReq req) {
-    return playerRepository.save(req.toEntity());
+  public PlayerCreateRes addPlayer(PlayerCreateReq req) {
+    Player newPlayer = playerRepository.save(req.toEntity());
+
+    return new PlayerCreateRes(newPlayer);
   }
 
   /**
