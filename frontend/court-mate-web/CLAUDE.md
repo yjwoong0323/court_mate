@@ -21,8 +21,8 @@
 
 ## 기술 스택
 
-- React (CRA 또는 Vite)
-- JavaScript (TypeScript는 추후 도입 검토)
+- React (Vite)
+- JavaScript
 - Axios (HTTP 클라이언트)
 - CSS / Bootstrap / Tailwind 중 선택
 
